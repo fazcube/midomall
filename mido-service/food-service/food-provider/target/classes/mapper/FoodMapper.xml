@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.foodprovider.dao.FoodDao">
+
+    <select id="getAllFoods"
+            resultType="com.entity.Foods">
+         select * from goods
+    </select>
+    <select id="getOneFoods"
+            resultType="com.entity.Foods"
+            parameterType="java.lang.String">
+        SELECT * FROM goods WHERE gname LIKE "%${gname}%"
+    </select>
+    <select id="getOneById"
+            resultType="com.entity.Foods"
+            parameterType="int">
+         select * from goods where gid=#{gid}
+    </select>
+
+</mapper>

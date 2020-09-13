@@ -1,0 +1,14 @@
+server:
+  port: ${port:9999}
+
+spring:
+  application:
+    name: eureka-server
+
+
+eureka:  #eureka配置
+  client:
+    fetch-registry: false  #表示是否从Eureka Server获取注册信息；单机模式，不拉取注册信息
+    register-with-eureka: false  #表示是否向Eureka Server注册自己；单机模式，不注册自己
+    service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要写其它Server的地址。
+      defaultZone: http://localhost:9999/eureka

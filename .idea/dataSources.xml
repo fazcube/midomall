@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="b2bdata@localhost" uuid="9b85941f-c7fc-4a05-b85e-e6ae747db796">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/b2bdata?serverTimezone=UTC&amp;characterEncoding=utf-8</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="b2bgoods@localhost" uuid="79c669e1-b566-453a-957a-c48fa0202906">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/b2bgoods?serverTimezone=UTC&amp;characterEncoding=utf-8</jdbc-url>
+    </data-source>
+  </component>
+</project>
