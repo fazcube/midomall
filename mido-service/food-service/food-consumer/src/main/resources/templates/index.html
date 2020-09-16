@@ -27,7 +27,7 @@
                 <a href="http://localhost:8896/goods/quit">退出</a>
             </div>
             <div class="login_btn fl" th:if="${session.uaccount} eq null">
-            <a href="http://localhost:8893/admin/tologin">
+            <a href="http://localhost:8100/admin/tologin">
                 请您登陆
             </a>
         </div>
@@ -38,14 +38,14 @@
 <div class="search_bar clearfix">
     <a th:href="@{'getAll?uaccount='+${session.uaccount}}" class="logo fl"><img src="/img/logo.png"></a>
     <div class="search_con fl">
-        <form action="/goods/getOne" method="get">
+        <form action="/food/getOneFoods" method="get">
             <input type="text" class="input_text fl" name="name" placeholder="搜索商品">
             <input type="submit" class="input_btn fr" name="" value="搜索">
         </form>
     </div>
 
 </div>
-<form action="/goods/shop" method="get">
+<form action="/food/shop" method="get">
 <div class="navbar_con">
     <div class="navbar">
         <h1 class="fl">全部商品分类</h1>

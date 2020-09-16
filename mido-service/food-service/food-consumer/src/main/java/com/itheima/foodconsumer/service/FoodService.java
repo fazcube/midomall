@@ -27,8 +27,7 @@ public interface FoodService {
                                   number,
                           @RequestParam(value = "id") int id);
     @RequestMapping(value = "/intcart",method = RequestMethod.GET)
-    public int intcart(@RequestParam(value = "goodsname") String
-                               goodsname,
+    public int intcart(@RequestParam(value = "goodsname") String goodsname,
                        @RequestParam(value = "number") int number,
                        @RequestParam(value = "price") int price,
                        @RequestParam(value = "goodid") int goodid,

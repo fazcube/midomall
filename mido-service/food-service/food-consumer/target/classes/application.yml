@@ -22,6 +22,7 @@ ribbon:
 thymeleaf:
   cache: false
   prefix: classpath:/templates/
+
 feign:
   hystrix:
     enabled: true
