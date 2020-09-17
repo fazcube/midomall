@@ -31,13 +31,18 @@ public class FoodServiceHystrix implements FoodService{
     }
 
     @Override
-    public int intcart(String goodsname, int number, int price, int goodid, int uid) {
+    public int intCart(String goodsname, int number, int price, int goodid, int uid) {
         return 0;
     }
 
     @Override
-    public List<Cart> getAllcart(int uid) {
+    public List<Cart> getAllCart(int uid) {
         return null;
+    }
+
+    @Override
+    public int deleteCart(int id) {
+        return 0;
     }
 
 

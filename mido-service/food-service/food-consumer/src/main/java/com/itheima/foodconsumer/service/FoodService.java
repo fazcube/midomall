@@ -17,23 +17,30 @@ public interface FoodService {
 
     @RequestMapping(value = "/getAllFoods",method = RequestMethod.GET)
     List<Foods> getAllFoods();
+
     @RequestMapping(value = "/getOneFoods",method = RequestMethod.GET)
     List<Foods> getOneFoods(@RequestParam(value = "gname") String gname);
+
     @RequestMapping(value = "/getOneById",method = RequestMethod.GET)
     Foods getOneById(@RequestParam(value = "gid") int gid);
 
     @RequestMapping(value = "/updateCart",method = RequestMethod.GET)
-    public int updateCart(@RequestParam(value = "number") int
+    int updateCart(@RequestParam(value = "number") int
                                   number,
                           @RequestParam(value = "id") int id);
-    @RequestMapping(value = "/intcart",method = RequestMethod.GET)
-    public int intcart(@RequestParam(value = "goodsname") String goodsname,
+
+    @RequestMapping(value = "/intCart",method = RequestMethod.GET)
+    int intCart(@RequestParam(value = "goodsname") String goodsname,
                        @RequestParam(value = "number") int number,
                        @RequestParam(value = "price") int price,
                        @RequestParam(value = "goodid") int goodid,
                        @RequestParam(value = "uid") int uid);
-    @RequestMapping(value = "/getAllcart",method = RequestMethod.GET)
-    public List<Cart> getAllcart(@RequestParam(value = "uid") int
+
+    @RequestMapping(value = "/getAllCart",method = RequestMethod.GET)
+    List<Cart> getAllCart(@RequestParam(value = "uid") int
                                          uid);
+
+    @RequestMapping(value = "/deleteCart",method = RequestMethod.GET)
+    int deleteCart(@RequestParam(value = "did")int did);
 
 }

@@ -44,7 +44,7 @@ public class UserController {
                 session.setAttribute("user", userService.login(uname));
                 System.out.print("登录成功");
                 System.out.println(session.getAttribute("user"));
-                return "redirect:http://localhost:8300";
+                return "redirect:http://localhost:8300/food/getAllFoods";
             }
         }
         System.out.print("登录失败");

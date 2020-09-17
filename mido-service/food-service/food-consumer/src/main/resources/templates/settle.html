@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="/css/reset.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <script src="/jsindex.js"></script>
+    <script src="/js/index.js"></script>
     <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/js/slide.js"></script>
@@ -160,7 +160,7 @@
             </div>
             <div class="user_link fl">
                 <span>|</span>
-                <a href="/goods/cartAll">我的购物车</a>
+                <a href="/food/getAllCart">我的购物车</a>
                 <span>|</span>
                 <a href="/goods/getAllorder">我的订单</a>
 
@@ -207,7 +207,7 @@
                 <td class="tdfour"><span class="unit" th:text="${newgoods.price}"></span></td>
                 <td class="tdfive"><span class="subtal">8</span></td>
                 <td class="tdsix">
-                     <a th:href="@{'http://localhost:8896/goods/deleteCart?did='+${newgoods.id}}">删&nbsp除</a>
+                     <a th:href="@{'http://localhost:8300/food/deleteCart?did='+${newgoods.id}}">删&nbsp除</a>
             </tr>
             <tr class="tr3" style="color: #4e4e4e"><td colspan="6"; class="talast">商品一共 <span style="color:#ff3e3e;font-size: 18px">2</span> 件
                 <p> 共计花费<span class="pricetal" style="color:#ff3e3e;font-size: 18px">8</span> 元</p>

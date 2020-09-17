@@ -3,19 +3,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itheima.foodprovider.dao.ShoppingDao">
 
-    <insert id="intcart" parameterType="com.entity.Cart">
-        INSERT INTO cart(goodsname,number, price,goodid,uid)
-        VALUES(#{goodsname}, #{number},#{price},#{goodid},#{uid});
+    <insert id="intCart" parameterType="com.entity.Cart">
+        INSERT INTO cart(id,goodsname,number,price,goodid,uid)
+        VALUES(default,#{goodsname},#{number},#{price},#{goodid},#{uid});
     </insert>
 
     <update id="updateCart" parameterType="int">
          UPDATE cart SET number = number+#{number} WHERE id = #{id};
     </update>
 
-    <select id="getAllcart"
+    <select id="getAllCart"
             resultType="com.entity.Cart"
             parameterType="java.lang.Integer">
         select * from cart WHERE uid = #{uid}
     </select>
+
+    <delete id="deleteCart" parameterType="int">
+        DELETE FROM cart WHERE id = #{id}
+    </delete>
+
 
 </mapper>
